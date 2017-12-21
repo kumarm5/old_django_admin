@@ -1,0 +1,156 @@
+body{
+    font-family: 'Roboto Slab', serif;        
+}
+
+.navbar{
+    background: #000 !important;    
+}
+
+.navbar a{
+    color: #fff !important;
+}
+
+.header_text{
+    margin-top: 20px;
+}
+
+.header_banner{
+    margin: 20px;
+    background-image: url('/static/images/header_banner.jpg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+}
+
+.header_banner_text{    
+    width: 70%;
+}
+
+.header_banner_text a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.category {
+    background: #F83A3A;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 10.5px;
+    color: #FFFFFF;
+    padding: 3px 10px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.post_information{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.post_information li {
+    display: inline-block;
+    margin-right: 13px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.post_information a, .post_information time{
+    color: #fff;
+}
+
+.post_information li i {
+    float: left;
+    color: #F83A3A;
+    margin-right: 7px;
+    top: 2px;
+    position: relative;
+}
+
+.card_container{
+    float: left;    
+}
+
+.card{
+    border-radius: none;
+    border: none;
+}
+
+.card-img-top {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+.card_post_information{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.card_post_information li {
+    display: inline-block;
+    margin-right: 13px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card_post_information a, .card_post_information time{
+    color: #333;
+}
+
+.card_post_information li i {
+    float: left;
+    color: #F83A3A;
+    margin-right: 7px;
+    top: 2px;
+    position: relative;
+}
+
+.sidebar{
+    border-left: 1px solid #E1E1E1;
+}
+
+.read_more{
+    background: #F83A3A;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 10.5px;
+    color: #FFFFFF;
+    padding: 3px 10px;
+    letter-spacing: 0.5px;
+    font-weight: 700;    
+}
+
+.read_more:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer{
+    margin-top: 20px;
+    background: #333 url('/static/images/line-pattern.png');
+    padding: 30px;    
+}
+
+.footer p{
+    color: #fff;
+}
+
+.footer h5{
+    color: #FFD701;
+}
+
+.footer hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #E1E1E1;
+}
+
+.footer_nav p{
+    color: #fff;
+}

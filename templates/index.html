@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <title>Blog-Responsive Website</title>
+            <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            
+        </head>
+        <body>
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                
+                <div class="container">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarlist" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarlist">
+                        <div class="navbar-nav ml-auto">
+                            <a class="nav-item nav-link" href="">Home</a>
+                            <a class="nav-item nav-link" href="">About me</a>
+                            <a class="nav-item nav-link" href="">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+            
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-md-12 text-center header_text">
+                        <div class="text-success"><i>Thoughts, stories and ideas.</i></div>                        
+                    </div>
+                    
+                    <div class="col-md-12 header_banner">
+                        <div class="header_banner_text">
+                            <a class="category" href="#">Travel</a>
+                            <h2><a href="">Unique Pieces In Your Home Decor Is A Fabulous Way To Add Character</a></h2>                            
+                            <ul class="post_information">
+                                <li><i class="fa fa-user"></i><a href="/author/anna/">Anna Jupios</a></li>
+                                <li><i class="fa fa-calendar"></i>
+                                    <time class="post-date" datetime="2015-11-11">11/11/2015</time>
+                                </li>
+                                <li><i class="fa fa-comment"></i><a href="#" data-disqus-identifier="ghost-23">0 Comments</a></li>
+                            </ul>
+                        </div>                                                
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9 post">
+                            
+                        <div class="col-md-4 card_container">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static '/images/new_post_1.jpg' %}" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="category">LIFE</div>
+                                    <h5 class="card-title">Unique Pieces In Your Home Decor Is A Fabulous Way To Add Character</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <ul class="card_post_information">
+                                        <li><i class="fa fa-user"></i><a href="/author/anna/">Anna Jupios</a></li>
+                                        <li><i class="fa fa-calendar"></i>
+                                            <time class="post-date" datetime="2015-11-11">11/11/2015</time>
+                                        </li>
+                                        <li><i class="fa fa-comment"></i><a href="#" data-disqus-identifier="ghost-23">0 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+
+                        <div class="col-md-4 card_container">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static '/images/new_post_2.jpg' %}" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="category">CATEGORY</div>
+                                    <h5 class="card-title">The Arrangements Of Local Will Generally Fall Into Four Categories</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <ul class="card_post_information">
+                                        <li><i class="fa fa-user"></i><a href="/author/anna/">Anna Jupios</a></li>
+                                        <li><i class="fa fa-calendar"></i>
+                                            <time class="post-date" datetime="2015-11-11">11/11/2015</time>
+                                        </li>
+                                        <li><i class="fa fa-comment"></i><a href="#" data-disqus-identifier="ghost-23">0 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+
+                        <div class="col-md-4 card_container">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static '/images/new_post_3.jpg' %}" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="category">LIFE</div>                                    
+                                    <h5 class="card-title">Down To Nothing</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <ul class="card_post_information">
+                                        <li><i class="fa fa-user"></i><a href="/author/anna/">Anna Jupios</a></li>
+                                        <li><i class="fa fa-calendar"></i>
+                                            <time class="post-date" datetime="2015-11-11">11/11/2015</time>
+                                        </li>
+                                        <li><i class="fa fa-comment"></i><a href="#" data-disqus-identifier="ghost-23">0 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+
+                        <div class="col-md-4 card_container">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static '/images/new_post_1.jpg' %}" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="category">LIFE</div>
+                                    <h5 class="card-title">Unique Pieces In Your Home Decor Is A Fabulous Way To Add Character</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <ul class="card_post_information">
+                                        <li><i class="fa fa-user"></i><a href="/author/anna/">Anna Jupios</a></li>
+                                        <li><i class="fa fa-calendar"></i>
+                                            <time class="post-date" datetime="2015-11-11">11/11/2015</time>
+                                        </li>
+                                        <li><i class="fa fa-comment"></i><a href="#" data-disqus-identifier="ghost-23">0 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+
+                        <div class="col-md-4 card_container">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static '/images/new_post_2.jpg' %}" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="category">CATEGORY</div>
+                                    <h5 class="card-title">The Arrangements Of Local Will Generally Fall Into Four Categories</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <ul class="card_post_information">
+                                        <li><i class="fa fa-user"></i><a href="/author/anna/">Anna Jupios</a></li>
+                                        <li><i class="fa fa-calendar"></i>
+                                            <time class="post-date" datetime="2015-11-11">11/11/2015</time>
+                                        </li>
+                                        <li><i class="fa fa-comment"></i><a href="#" data-disqus-identifier="ghost-23">0 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+
+                        <div class="col-md-4 card_container">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static '/images/new_post_3.jpg' %}" alt="Card image cap">
+                                <div class="card-body">
+                                    <div class="category">LIFE</div>                                    
+                                    <h5 class="card-title">Down To Nothing</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <ul class="card_post_information">
+                                        <li><i class="fa fa-user"></i><a href="/author/anna/">Anna Jupios</a></li>
+                                        <li><i class="fa fa-calendar"></i>
+                                            <time class="post-date" datetime="2015-11-11">11/11/2015</time>
+                                        </li>
+                                        <li><i class="fa fa-comment"></i><a href="#" data-disqus-identifier="ghost-23">0 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-3 sidebar">
+                        
+                        <div class="widget">
+                            <div class="widget_title">
+                                <h5>ABOUT ME</h5>
+                            </div>
+                            <img src="{% static 'images/img_profile.jpg' %}" class="img-fluid">
+                            <p><strong>Mukul Kumar</strong></p>
+                            <p>Suspendisse auctor, elit sed aux el maximus volutpat. Mauris ac augue lacus. Suspendisse auctor, elit sed aux el maximus volutpat. Suspendisse..<a href="#" class="read_more">Read More</a></p>                        
+                        </div>
+                        <hr>
+                        <div class="widget">
+                            <div class="widget_title">
+                                <h5>LATEST POST</h5>
+                            </div>
+                            <img src="{% static 'images/header_banner.jpg' %}" class="img-fluid">
+                            <a href="#" class="category">TRAVEL</a>
+                            <p>Unique Pieces In Your Home Decor Is A Fabulous Way To Add Character</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
+            
+            <div class="container-fluid footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">                        
+                            <h5>TEXT WIDGET</h5>
+                            <hr>
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sit amet euismod magna. Aliquam metus augue, vulputate quis dolor auctor, fringilla luctus diam. Sed nunc ex, placerat nec ullamcorper luctus, efficitur sed.</p>
+                        </div>
+
+                        <div class="col-md-4">                        
+                            <h5>LATEST POST</h5>
+                            <hr>
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sit amet euismod magna. Aliquam metus augue, vulputate quis dolor auctor, fringilla luctus diam. Sed nunc ex, placerat nec ullamcorper luctus, efficitur sed.</p>
+                        </div>
+
+                        <div class="col-md-4">                        
+                            <h5>TAG</h5>
+                            <hr>
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sit amet euismod magna. Aliquam metus augue, vulputate quis dolor auctor, fringilla luctus diam. Sed nunc ex, placerat nec ullamcorper luctus, efficitur sed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer_nav">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">                    
+                    <div class="container">
+                        <div class="mx-auto">
+                            <p><i>&copy; 2017, BlogTut. All rights Reserved.</i></p>        
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            
+            <script src="{% static "/js/jquery-3.2.1.min.js" %}"></script>
+            <script src="{% static "/js/popper.min.js" %}"></script>
+            <script src="{% static "/js/bootstrap.min.js" %}"></script>
+        </body>            
+    </html>

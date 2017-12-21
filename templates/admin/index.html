@@ -1,0 +1,92 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}{{ block.super }} <link rel="stylesheet" type="text/css" href="{% static "/css/adminstyle.css" %}" />{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block usertools %}{% endblock %}
+
+{% block branding %}{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">                    
+        <!-- top nav -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            
+            <a class="navbar-brand" href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarlist" aria-controls="navbarlist" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarlist">
+                <div class="navbar-nav ml-auto">
+                
+                    {% if has_permission %}
+                        {% block welcome-msg %} 
+                            <p class="nav-item nav-link">Welcome, <strong>{% firstof user.get_short_name user.get_username %}</strong>.</p>
+                        {% endblock %}
+                        {% block userlinks %}
+                            {% if site_url %}
+                                <a class="nav-item nav-link" href="{{ site_url }}">{% trans 'View site' %}</a>
+                            {% endif %}
+                            {% if user.is_active and user.is_staff %}
+                                {% url 'django-admindocs-docroot' as docsroot %}
+                                {% if docsroot %}
+                                    <a class="nav-item nav-link" href="{{ docsroot }}">{% trans 'Documentation' %}</a>
+                                {% endif %}
+                            {% endif %}
+                            {% if user.has_usable_password %}
+                                <a class="nav-item nav-link" href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a>
+                            {% endif %}
+                            <a id="id_logout" class="nav-item nav-link" href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+                        {% endblock %}
+                    {% endif %}                
+
+                </div>                        
+            </div>
+
+        </nav>
+
+        <div class="row">
+            {% block menusidebar %}
+            <div class="col-md-3 admin_sidebar">
+                
+                <ul>
+                    {% if app_list %}
+                        {% for app in app_list %}
+                            {% for model in app.models %}
+                                <li><a href="{{ model.admin_url }}">{{ model.name }}</a></li>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+
+            </div>
+            {% endblock %}
+
+            {% block main_container %}
+            <div class="col-md-9 main_content">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>                
+            </div>
+            {% endblock %}
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <span class="text-muted">Place sticky footer content here.</span>
+            </div>
+        </footer>
+    </div>
+    {% block footer %}
+        {{ block.super }}
+        <script src="{% static "/js/jquery.slimscroll.min.js" %}"></script>       
+        <script src="{% static "/js/adminscripts.js" %}"></script>
+    {% endblock %}
+    
+{% endblock %}

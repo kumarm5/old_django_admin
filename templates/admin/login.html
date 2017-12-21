@@ -1,0 +1,85 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+{% block extrastyle %}{{ block.super }} 
+
+<link rel="stylesheet" type="text/css" href="{% static "/css/login.css" %}">
+{{ form.media }}
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} login{% endblock %}
+
+{% block usertools %}{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+{% if form.errors and not form.non_field_errors %}
+<p class="errornote">
+{% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
+</p>
+{% endif %}
+
+{% if form.non_field_errors %}
+{% for error in form.non_field_errors %}
+<p class="errornote">
+    {{ error }}
+</p>
+{% endfor %}
+{% endif %}
+
+<div id="content-main">
+
+{% if user.is_authenticated %}
+<p class="errornote">
+{% blocktrans trimmed %}
+    You are authenticated as {{ username }}, but are not authorized to
+    access this page. Would you like to login to a different account?
+{% endblocktrans %}
+</p>
+{% endif %}
+
+    <div class="row">
+        <div class="col-md-4 offset-md-1">
+            <br><br><br>
+            <h2>Welcome !</h2>
+            <h5>Today will be great.</h5>
+            <br><br>
+            <form action="{{ app_path }}" method="post" id="login-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.username.errors }}
+                    <input type="text" name="username" autofocus="" maxlength="254" required="" id="id_username" class="form-control" placeholder="Enter Username">                    
+                </div>
+                <br>
+                <div class="form-group">
+                    {{ form.password.errors }}
+                    <input type="password" name="password" required="" id="id_password" class="form-control" placeholder="Enter Password">                
+                </div>
+                <br>
+                <input type="hidden" name="next" value="{{ next }}" />
+                <div class="col-md-6">
+                    {% url 'admin_password_reset' as password_reset_url %}
+                    {% if password_reset_url %}
+                    <div class="password-reset-link">
+                        <a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>
+                    </div>
+                    {% endif %}
+                    <button type="submit" name="login" class="btn btn-info">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+{% block footer %}
+    {{ block.super }}
+    <script src="{% static "/js/jquery.backstretch.min.js" %}"></script>
+    <script src="{% static "/js/scripts.js" %}"></script>
+{% endblock %}
+
